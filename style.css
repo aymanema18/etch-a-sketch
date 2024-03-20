@@ -1,0 +1,39 @@
+div {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+.second-container {
+    display: flex;
+}
+
+.third-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.firstgen {
+    display: flex;
+    width: 25vw;
+    height: 25vw;
+}
+
+.firstgen, .secondgen{
+    border: 1px solid lightcoral;
+}
+
+.secondgen {
+    width: 6.25vw;
+    height: 6.25vw;
+}
