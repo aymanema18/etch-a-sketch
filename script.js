@@ -24,4 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-})
+    let secondGenDivs = document.querySelectorAll(".secondgen").forEach(div => {
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = "gray";
+        })
+    });
+});
