@@ -41,13 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         divs = document.querySelectorAll(".firstgen").forEach(div => {
             div.addEventListener('mouseover', () => {
-                div.style.backgroundColor = "gray";
+            let randomNum1 = Math. floor(Math. random() * 256);
+            let randomNum2 = Math. floor(Math. random() * 256);
+            let randomNum3 = Math. floor(Math. random() * 256);
+            div.style.backgroundColor = `rgb(${randomNum1}, ${randomNum2}, ${randomNum3})`;
             })
         });
     })
     divs = document.querySelectorAll(".firstgen").forEach(div => {
         div.addEventListener('mouseover', () => {
-            div.style.backgroundColor = "gray";
+            let randomNum1 = Math. floor(Math. random() * 256);
+            let randomNum2 = Math. floor(Math. random() * 256);
+            let randomNum3 = Math. floor(Math. random() * 256);
+            div.style.backgroundColor = `rgb(${randomNum1}, ${randomNum2}, ${randomNum3})`;
         })
     });
 
