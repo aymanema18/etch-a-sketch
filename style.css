@@ -8,13 +8,15 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 100vw;
+    width: 100vw;
     flex-direction: column;
 
 }
 
 .second-container {
     display: flex;
+    flex: 1;
 }
 
 .third-container {
@@ -24,16 +26,21 @@ body {
 }
 
 .firstgen {
-    display: flex;
-    width: 25vw;
-    height: 25vw;
-}
-
-.firstgen, .secondgen{
+    flex: 1;
     border: 1px solid lightcoral;
 }
 
-.secondgen {
-    width: 6.25vw;
-    height: 6.25vw;
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: lightseagreen;
+    padding: 10px 20px;
+    border: none;
 }

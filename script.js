@@ -1,32 +1,54 @@
 document.addEventListener('DOMContentLoaded', () => {
     let div;
+    let divs;
     let container = document.querySelector(".container")
     let secondContainer;
-    let thirdContainer;
-    let divv2;
-    for (let i = 0; i < 4; i++) {
+    let btn = document.querySelector(".btn");
+    let pxNum;
+
+    for (let i = 0; i < 16; i++) {
         secondContainer = document.createElement("div");
         secondContainer.setAttribute("class", "second-container");
         container.appendChild(secondContainer);
-        for (let j = 0; j < 4; j++) {
+        for (let j = 0; j < 16; j++) {
             div = document.createElement("div");
             div.setAttribute("class", "firstgen");
             secondContainer.appendChild(div);
-            for (let c = 0; c < 4; c++) {
-                thirdContainer = document.createElement("div");
-                thirdContainer.setAttribute("class", "third-container");
-                div.appendChild(thirdContainer);
-                for (let k = 0; k < 4; k++) {
-                    divv2 = document.createElement("div");
-                    divv2.setAttribute("class", "secondgen");
-                    thirdContainer.appendChild(divv2);
-                }
-            }
+        
         }
     }
-    let secondGenDivs = document.querySelectorAll(".secondgen").forEach(div => {
+    btn.addEventListener('click', () => {
+        pxNum = +prompt("size:");
+        if (pxNum > 100) {
+            alert("100 is the limit.");
+            pxNum = 16;
+        } else if (pxNum < 0) {
+            alert("Please enter a valid number.");
+            pxNum = 16;
+        }
+        container.innerHTML = '';
+        for (let i = 0; i < pxNum; i++) {
+            secondContainer = document.createElement("div");
+            secondContainer.setAttribute("class", "second-container");
+            container.appendChild(secondContainer);
+            
+            for (let j = 0; j < pxNum; j++) {
+                div = document.createElement("div");
+                div.setAttribute("class", "firstgen");
+                secondContainer.appendChild(div);
+            
+            }
+        }
+        divs = document.querySelectorAll(".firstgen").forEach(div => {
+            div.addEventListener('mouseover', () => {
+                div.style.backgroundColor = "gray";
+            })
+        });
+    })
+    divs = document.querySelectorAll(".firstgen").forEach(div => {
         div.addEventListener('mouseover', () => {
             div.style.backgroundColor = "gray";
         })
     });
+
 });
